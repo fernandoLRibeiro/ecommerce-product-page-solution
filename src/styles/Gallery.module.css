@@ -1,0 +1,40 @@
+.Gallery {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  width: 27.75rem;
+}
+
+.mainImage {
+  width: 100%;
+  border-radius: 1.125rem;
+}
+
+.thumbnailList {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.thumbnailContainer {
+  cursor: pointer;
+}
+
+.thumbnail {
+  width: 5.5rem;
+  border-radius: 0.625rem;
+  transition: var(--transition-slow);
+}
+
+.thumbnail:hover {
+  opacity: 0.75;
+}
+
+.active {
+  outline: 3px solid var(--color-primary-orange);
+
+  opacity: 0.6;
+}

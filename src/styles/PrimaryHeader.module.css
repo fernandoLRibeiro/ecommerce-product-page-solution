@@ -58,9 +58,10 @@
 
 .navLink {
   color: var(--color-neutral-dark-grayish-blue);
+  letter-spacing: 0.01em;
 }
 
-.navLink:hover {
+.navLinkContainer:hover .navLink {
   color: var(--color-neutral-very-dark-grayish-blue);
 }
 
@@ -75,6 +76,7 @@
   height: 50px;
   transition: var(--transition-slow);
   border-radius: 100%;
+  cursor: pointer;
 }
 
 .avatar:hover {
