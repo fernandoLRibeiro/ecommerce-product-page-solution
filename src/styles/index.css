@@ -1,0 +1,18 @@
+:root {
+  --color-primary-orange: hsl(26, 100%, 55%);
+  --color-primary-pale-orange: hsl(25, 100%, 94%);
+  --color-neutral-very-dark-blue: hsl(220, 13%, 13%);
+  --color-neutral-dark-grayish-blue: hsl(219, 9%, 45%);
+  --color-neutral-grayish-blue: hsl(220, 14%, 75%);
+  --color-neutral-light-grayish-blue: hsl(223, 64%, 98%);
+  --color-neutral-white: hsl(0, 0%, 100%);
+  --color-neutral-black: hsla(0% 0% 0%/ 0.75);
+
+  --transition-fast: all 0.02s ease-in-out;
+  --transition-slow: all 0.04s ease-in-out;
+}
+
+body {
+  margin: 0;
+  font-family: "Kumbh Sans", sans-serif;
+}
