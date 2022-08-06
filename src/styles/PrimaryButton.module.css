@@ -1,0 +1,27 @@
+.PrimaryButton {
+  border: 0;
+  outline: 0;
+  border-radius: 0.75rem;
+  background-color: var(--color-primary-orange);
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--color-neutral-white);
+  padding: 1.125em;
+  cursor: pointer;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  height: 100%;
+  transition: all 0.1s ease-in-out;
+  box-shadow: 0px 8px 32px -16px #ff7e1b;
+}
+
+.PrimaryButton:hover {
+  background-color: hsla(27, 100%, 71%, 1);
+}
+
+.cartVariant {
+  box-shadow: none;
+}

@@ -13,7 +13,7 @@
 }
 
 .container:hover .icon {
-  color: var(--color-neutral-very-dark-grayish-blue);
+  color: var(--color-neutral-very-dark-blue);
 }
 
 .badge {
@@ -52,6 +52,7 @@
   margin: 0;
   font-size: 1rem;
   font-weight: 700;
+  color: var(--color-neutral-very-dark-blue);
 }
 
 .secondHalf {
@@ -109,19 +110,7 @@
 .totalPrice {
   font-size: 1rem;
   font-weight: 700;
-  color: var(--color-neutral-very-dark-grayish-blue);
+  color: var(--color-neutral-very-dark-blue);
   letter-spacing: 0.04em;
   margin: 0;
-}
-
-.button {
-  border: 0;
-  outline: 0;
-  border-radius: 0.75rem;
-  background-color: var(--color-primary-orange);
-  font-size: 1rem;
-  font-weight: 700;
-  color: var(--color-neutral-white);
-  padding: 1.125em;
-  cursor: pointer;
 }

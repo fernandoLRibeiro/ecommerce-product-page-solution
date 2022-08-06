@@ -62,7 +62,7 @@
 }
 
 .navLinkContainer:hover .navLink {
-  color: var(--color-neutral-very-dark-grayish-blue);
+  color: var(--color-neutral-very-dark-blue);
 }
 
 .secondHalf {

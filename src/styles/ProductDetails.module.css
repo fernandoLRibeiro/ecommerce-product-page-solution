@@ -1,0 +1,93 @@
+.ProductDetails {
+  width: 27.75rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.875rem;
+  margin-top: 3.875rem;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.subtitle {
+  font-size: 0.8125rem;
+  font-weight: 700;
+  color: var(--color-primary-orange);
+  letter-spacing: 0.14em;
+  margin: 0;
+}
+
+.name {
+  font-size: 2.75rem;
+  font-weight: 700;
+  line-height: 3rem;
+  margin: 0;
+
+  color: var(--color-neutral-very-dark-blue);
+}
+
+.description {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.descriptionText {
+  color: var(--color-neutral-dark-grayish-blue);
+  font-size: 1.025rem;
+  font-weight: 400;
+  line-height: 1.625rem;
+  letter-spacing: -0.0075em;
+  margin: 0;
+}
+
+.pricingCluster {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.mainPriceCluster {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.mainPrice {
+  margin: 0;
+  font-size: 1.75rem;
+  letter-spacing: 0.04em;
+}
+
+.discountBadge {
+  background-color: var(--color-primary-pale-orange);
+  padding: 0.25rem 0.5rem;
+  font-weight: 700;
+  font-size: 1rem;
+  letter-spacing: 0.04em;
+  color: var(--color-primary-orange);
+  border-radius: 0.5rem;
+}
+
+.noDiscount {
+  margin: 0;
+  font-size: 1rem;
+  letter-spacing: 0.05em;
+  text-decoration-line: line-through;
+  color: var(--color-neutral-grayish-blue);
+}
+
+.controls {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 1rem;
+  align-items: center;
+  margin-top: 0.5rem;
+}
+
+.cartIcon {
+  fill: var(--color-neutral-white);
+}

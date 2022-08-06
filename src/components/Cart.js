@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import styles from "../styles/Cart.module.css";
+import PrimaryButton from "./PrimaryButton";
 
 function Cart() {
   const [openCart, setOpenCart] = useState(false);
@@ -46,7 +47,7 @@ function Cart() {
                 alt="delete"
               />
             </div>
-            <button className={styles.button}>Checkout</button>
+            <PrimaryButton cart>Checkout</PrimaryButton>
           </div>
         </div>
       )}
