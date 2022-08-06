@@ -1,11 +1,20 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
+import { StateContext } from "../ContextProvider";
 import CartIcon from "../icons/CartIcon";
 import styles from "../styles/ProductDetails.module.css";
 import PrimaryButton from "./PrimaryButton";
 import QuantityInput from "./QuantityInput";
 
 function ProductDetails() {
+  const [state, dispatch] = useContext(StateContext);
   const [counter, setCounter] = useState(0);
+
+  const handleAdd = (item) => {
+    dispatch({
+      type: "ADD_ITEM",
+      item: item,
+    });
+  };
   return (
     <div className={styles.ProductDetails}>
       <header className={styles.header}>
@@ -34,7 +43,19 @@ function ProductDetails() {
           max={100}
           min={0}
         />
-        <PrimaryButton>
+        <PrimaryButton
+          onClick={() => {
+            if (counter > 0) {
+              handleAdd({
+                name: "Fall Limited Edition Sneakers",
+                price: 250,
+                quantity: counter,
+                discount: 0.5,
+                thumbnail: "./assets/images/image-product-1-thumbnail.jpg",
+              });
+            }
+          }}
+        >
           <CartIcon className={styles.cartIcon} />
           Add to cart
         </PrimaryButton>

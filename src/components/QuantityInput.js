@@ -10,7 +10,7 @@ function QuantityInput({ value, setValue, min, max }) {
     } else if (e.target.value > max) {
       setValue(max);
     } else {
-      setValue(e.target.value);
+      setValue(Number(e.target.value));
     }
   };
 

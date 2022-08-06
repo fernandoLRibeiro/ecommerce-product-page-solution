@@ -1,10 +1,24 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import styles from "../styles/Cart.module.css";
 import PrimaryButton from "./PrimaryButton";
 import CartIcon from "../icons/CartIcon";
+import DeleteIcon from "../icons/DeleteIcon";
+import { StateContext } from "../ContextProvider";
 
 function Cart() {
   const [openCart, setOpenCart] = useState(false);
+  const [state, dispatch] = useContext(StateContext);
+  const formatter = new Intl.NumberFormat("en-US", {
+    style: "currency",
+    currency: "USD",
+  });
+
+  const handleDelete = (item) => {
+    dispatch({
+      type: "REMOVE_ITEM",
+      item: item,
+    });
+  };
 
   return (
     <div className={styles.Cart}>
@@ -14,7 +28,15 @@ function Cart() {
           setOpenCart(!openCart);
         }}
       >
-        <div className={styles.badge}>3</div>
+        {state.cart.length > 0 && (
+          <div className={styles.badge}>
+            {state.cart.length > 1
+              ? state.cart.reduce(
+                  (previousItem, item) => item.quantity + previousItem.quantity
+                )
+              : state.cart[0].quantity}
+          </div>
+        )}
         <CartIcon
           className={styles.icon}
           src="./assets/images/icon-cart.svg"
@@ -27,28 +49,49 @@ function Cart() {
             <h5 className={styles.heading}>Cart</h5>
           </header>
           <div className={styles.secondHalf}>
-            <div className={styles.product}>
-              <img
-                className={styles.productThumbnail}
-                src="./assets/images/image-product-1-thumbnail.jpg"
-                alt="product thumbnail"
-              />
-              <div className={styles.productInfo}>
-                <p className={styles.productName}>
-                  Fall Limited Edition Sneakers
-                </p>
-                <div className={styles.priceCluster}>
-                  <p className={styles.relativePrice}>$125.00 x 3</p>
-                  <p className={styles.totalPrice}>$375.00</p>
-                </div>
-              </div>
-              <img
-                className={styles.deleteIcon}
-                src="./assets/images/icon-delete.svg"
-                alt="delete"
-              />
-            </div>
-            <PrimaryButton cart>Checkout</PrimaryButton>
+            {state.cart.length > 0 ? (
+              <>
+                {state.cart.map((item) => (
+                  <div className={styles.product}>
+                    <img
+                      className={styles.productThumbnail}
+                      src={item.thumbnail}
+                      alt="product thumbnail"
+                    />
+                    <div className={styles.productInfo}>
+                      <p className={styles.productName}>{item.name}</p>
+                      <div className={styles.priceCluster}>
+                        <p className={styles.relativePrice}>
+                          {formatter.format(
+                            item.discount
+                              ? item.price * item.discount
+                              : item.price
+                          )}{" "}
+                          x {item.quantity}
+                        </p>
+                        <p className={styles.totalPrice}>
+                          {formatter.format(
+                            (item.discount
+                              ? item.price * item.discount
+                              : item.price) * item.quantity
+                          )}
+                        </p>
+                      </div>
+                    </div>
+                    <button
+                      className={styles.deleteButton}
+                      onClick={() => handleDelete(item)}
+                    >
+                      <DeleteIcon className={styles.deleteIcon} />
+                    </button>
+                  </div>
+                ))}
+
+                <PrimaryButton cart>Checkout</PrimaryButton>
+              </>
+            ) : (
+              <p className={styles.emptyCartText}>Your cart is empty</p>
+            )}
           </div>
         </div>
       )}

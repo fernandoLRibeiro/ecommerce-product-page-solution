@@ -38,7 +38,7 @@
   position: absolute;
 
   top: 3rem;
-
+  width: 22.5rem;
   background-color: var(--color-neutral-white);
   border-radius: 0.75rem;
   box-shadow: 0px 12px 36px -6px rgba(0, 0, 0, 0.25);
@@ -114,6 +114,19 @@
   color: var(--color-neutral-very-dark-blue);
   letter-spacing: 0.04em;
   margin: 0;
+}
+
+.deleteButton {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  padding: 0;
+}
+
+.emptyCartText {
+  margin: 3.375rem auto 4.125rem;
+  font-weight: 700;
+  color: var(--color-neutral-dark-grayish-blue);
 }
 
 @media screen and (max-width: 768px) {
