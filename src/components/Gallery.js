@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import styles from "../styles/Gallery.module.css";
+import PreviousIcon from "../icons/PreviousIcon";
+import NextIcon from "../icons/NextIcon";
 
 function Gallery() {
   const galleryItems = [
@@ -27,11 +29,37 @@ function Gallery() {
   const [mainDisplay, setMainDisplay] = useState(0);
   return (
     <div className={styles.Gallery}>
+      <button
+        className={styles.mobileGalleryButton}
+        onClick={() => {
+          if (mainDisplay === 0) {
+            setMainDisplay(galleryItems.length - 1);
+          } else {
+            setMainDisplay(mainDisplay - 1);
+          }
+        }}
+      >
+        <PreviousIcon className={styles.mobileButtonIcon} />
+      </button>
+
       <img
         className={styles.mainImage}
         src={galleryItems[mainDisplay].mainImage}
         alt={galleryItems[mainDisplay].alt}
       />
+
+      <button
+        className={styles.mobileGalleryButton}
+        onClick={() => {
+          if (mainDisplay === galleryItems.length - 1) {
+            setMainDisplay(0);
+          } else {
+            setMainDisplay(mainDisplay + 1);
+          }
+        }}
+      >
+        <NextIcon className={styles.mobileButtonIcon} />
+      </button>
       <ul className={styles.thumbnailList}>
         {galleryItems.map((item, index) => (
           <li

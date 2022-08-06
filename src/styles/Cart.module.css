@@ -115,3 +115,15 @@
   letter-spacing: 0.04em;
   margin: 0;
 }
+
+@media screen and (max-width: 768px) {
+  .Cart {
+    position: static;
+  }
+
+  .openCart {
+    inset: 4.75rem 0.5rem;
+
+    height: fit-content;
+  }
+}

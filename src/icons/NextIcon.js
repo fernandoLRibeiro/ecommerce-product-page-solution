@@ -4,7 +4,7 @@ function NextIcon({ className }) {
   return (
     <svg
       className={className}
-      width="13"
+      width="12"
       height="18"
       xmlns="http://www.w3.org/2000/svg"
     >

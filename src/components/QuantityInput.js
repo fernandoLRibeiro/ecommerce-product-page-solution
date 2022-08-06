@@ -20,7 +20,7 @@ function QuantityInput({ value, setValue, min, max }) {
         className={styles.button}
         onClick={() => {
           if (0 < value) {
-            setValue(value - 1);
+            setValue(Number(value) - 1);
           }
         }}
       >
@@ -38,8 +38,8 @@ function QuantityInput({ value, setValue, min, max }) {
       <button
         className={styles.button}
         onClick={() => {
-          if (max > value) {
-            setValue(value + 1);
+          if (100 > value) {
+            setValue(Number(value) + 1);
           }
         }}
       >

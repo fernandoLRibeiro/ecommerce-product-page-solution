@@ -91,3 +91,44 @@
 .cartIcon {
   fill: var(--color-neutral-white);
 }
+
+@media screen and (max-width: 768px) {
+  .ProductDetails {
+    margin: 0;
+    padding: 1.5rem;
+    gap: 1rem;
+    width: 100%;
+  }
+
+  .header {
+    gap: 0.875rem;
+  }
+
+  .subtitle {
+    font-size: 0.75rem;
+    letter-spacing: 0.14em;
+  }
+
+  .name {
+    font-size: 1.75rem;
+    line-height: 2rem;
+  }
+
+  .descriptionText {
+    font-size: 0.9375rem;
+    line-height: 1.5625rem;
+    letter-spacing: 0.0035em;
+  }
+
+  .pricingCluster {
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .controls {
+    flex-direction: column;
+    width: 100%;
+  }
+}
