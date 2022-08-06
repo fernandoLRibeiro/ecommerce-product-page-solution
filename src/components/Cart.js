@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import styles from "../styles/Cart.module.css";
 import PrimaryButton from "./PrimaryButton";
+import CartIcon from "../icons/CartIcon";
 
 function Cart() {
   const [openCart, setOpenCart] = useState(false);
@@ -14,7 +15,7 @@ function Cart() {
         }}
       >
         <div className={styles.badge}>3</div>
-        <img
+        <CartIcon
           className={styles.icon}
           src="./assets/images/icon-cart.svg"
           alt="cart"

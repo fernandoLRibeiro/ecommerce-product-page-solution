@@ -29,6 +29,7 @@
 }
 
 .icon {
+  fill: var(--color-neutral-dark-grayish-blue);
   width: 1.375rem;
   height: 1.25rem;
 }
