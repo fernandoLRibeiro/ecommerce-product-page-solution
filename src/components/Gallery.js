@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import styles from "../styles/Gallery.module.css";
 import PreviousIcon from "../icons/PreviousIcon";
 import NextIcon from "../icons/NextIcon";
+import Modal from "./Modal";
 
 function Gallery() {
   const galleryItems = [
@@ -27,6 +28,7 @@ function Gallery() {
     },
   ];
   const [mainDisplay, setMainDisplay] = useState(0);
+  const [open, setOpen] = useState(true);
   return (
     <div className={styles.Gallery}>
       <button
@@ -46,6 +48,7 @@ function Gallery() {
         className={styles.mainImage}
         src={galleryItems[mainDisplay].mainImage}
         alt={galleryItems[mainDisplay].alt}
+        onClick={() => setOpen(true)}
       />
 
       <button
@@ -76,6 +79,14 @@ function Gallery() {
           </li>
         ))}
       </ul>
+      <Modal
+        open={open}
+        closeModal={() => {
+          setOpen(false);
+        }}
+        gallery={galleryItems}
+        mainDisplay={mainDisplay}
+      />
     </div>
   );
 }

@@ -14,7 +14,7 @@ function DeleteIcon({ className }) {
           id="a"
         />
       </defs>
-      <use fill="#C3CAD9" fill-rule="nonzero" href="#a" />
+      <use href="#a" />
     </svg>
   );
 }

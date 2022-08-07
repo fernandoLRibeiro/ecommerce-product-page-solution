@@ -123,6 +123,15 @@
   padding: 0;
 }
 
+.deleteIcon {
+  fill: var(--color-neutral-grayish-blue);
+  transition: var(--transition-slow);
+}
+
+.deleteButton:hover .deleteIcon {
+  fill: var(--color-neutral-dark-grayish-blue);
+}
+
 .emptyCartText {
   margin: 3.375rem auto 4.125rem;
   font-weight: 700;

@@ -1,0 +1,127 @@
+.Modal {
+  position: fixed;
+  inset: 0 0 0 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+  height: max-content;
+  width: 100vw;
+  min-height: 100vh;
+}
+
+.overlay {
+  position: fixed;
+  inset: 0 0 0 0;
+  background-color: rgba(0, 0, 0, 0.75);
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  z-index: 1000;
+  align-items: center;
+  gap: 1.375rem;
+}
+
+.closeButtonContainer {
+  display: flex;
+  justify-content: flex-end;
+  width: 34.375rem;
+}
+
+.closeButton {
+  border: none;
+  background-color: transparent;
+  outline: none;
+}
+
+.gallery {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2.5rem;
+}
+
+.mainImageContainer {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 34.375rem;
+  width: 37.875rem;
+}
+
+.galleryButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  width: 3.5rem;
+  height: 3.5rem;
+  background-color: var(--color-neutral-white);
+  border: none;
+  outline: none;
+  border-radius: 100%;
+  flex-shrink: 0;
+  z-index: 7;
+  cursor: pointer;
+  transition: var(--transition-slow);
+}
+
+.buttonIcon {
+  stroke: var(--color-neutral-dark-grayish-blue);
+}
+
+.galleryButton:hover .buttonIcon {
+  stroke: var(--color-primary-orange);
+}
+
+.mainImage {
+  position: absolute;
+  inset: 0 1.75rem;
+  height: 34.375rem;
+  width: 34.375rem;
+  border-radius: 0.875rem;
+}
+
+.icon {
+  fill: white;
+  cursor: pointer;
+}
+
+.thumbnailList {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  gap: 2rem;
+  width: fit-content;
+}
+
+.thumbnailContainer {
+  cursor: pointer;
+}
+
+.thumbnail {
+  width: 5.5rem;
+  border-radius: 0.625rem;
+  transition: var(--transition-slow);
+}
+
+.thumbnail:hover {
+  opacity: 0.75;
+}
+
+.active {
+  outline: 3px solid var(--color-primary-orange);
+
+  opacity: 0.6;
+}
+
+@media screen and (max-width: 768px) {
+  .Modal {
+    display: none;
+  }
+}

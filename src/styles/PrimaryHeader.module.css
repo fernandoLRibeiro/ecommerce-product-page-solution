@@ -1,11 +1,12 @@
 .PrimaryHeader {
-  height: 7rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
   margin: 0 10.25rem;
   border-bottom: 2px solid var(--color-neutral-light-grayish-blue);
   max-width: 100vw;
+
+  padding: 1.75rem 0 2.1rem;
 }
 
 .mobileOverlay {
@@ -34,7 +35,7 @@
   display: flex;
   height: 100%;
   list-style: none;
-  gap: 2rem;
+  gap: 1.8rem;
   padding: 0;
   margin: 0;
 }
@@ -92,12 +93,12 @@
   display: none;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1024px) {
   .PrimaryHeader {
     margin: 0;
     border-bottom: none;
     padding: 0 1.5rem;
-    height: 4.25rem;
+    padding: 1.2rem 1.5rem 1.5rem;
     align-items: center;
     position: sticky;
     top: 0;

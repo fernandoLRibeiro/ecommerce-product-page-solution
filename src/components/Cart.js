@@ -20,6 +20,12 @@ function Cart() {
     });
   };
 
+  const absoluteQuantity =
+    state.cart.length > 0 &&
+    (state.cart.length > 1
+      ? state.cart.reduce((total, item) => total + item.quantity, 0)
+      : state.cart[0].quantity);
+
   return (
     <div className={styles.Cart}>
       <div
@@ -28,13 +34,9 @@ function Cart() {
           setOpenCart(!openCart);
         }}
       >
-        {state.cart.length > 0 && (
+        {absoluteQuantity && (
           <div className={styles.badge}>
-            {state.cart.length > 1
-              ? state.cart.reduce(
-                  (previousItem, item) => item.quantity + previousItem.quantity
-                )
-              : state.cart[0].quantity}
+            {absoluteQuantity > 99 ? "99+" : absoluteQuantity}
           </div>
         )}
         <CartIcon
