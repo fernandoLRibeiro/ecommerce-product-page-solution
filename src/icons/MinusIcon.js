@@ -15,7 +15,7 @@ function MinusIcon({ className }) {
           id="a"
         />
       </defs>
-      <use fill-rule="nonzero" href="#a" />
+      <use fillRule="nonzero" href="#a" />
     </svg>
   );
 }

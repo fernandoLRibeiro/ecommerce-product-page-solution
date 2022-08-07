@@ -53,8 +53,8 @@ function Cart() {
           <div className={styles.secondHalf}>
             {state.cart.length > 0 ? (
               <>
-                {state.cart.map((item) => (
-                  <div className={styles.product}>
+                {state.cart.map((item, index) => (
+                  <div className={styles.product} key={`cart item ${index}`}>
                     <img
                       className={styles.productThumbnail}
                       src={item.thumbnail}

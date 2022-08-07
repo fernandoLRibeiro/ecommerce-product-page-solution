@@ -60,6 +60,7 @@ function Modal({ open, closeModal, gallery, mainDisplay }) {
                 onClick={() => {
                   setMain(index);
                 }}
+                key={`modal thumbnail ${index}`}
               >
                 <img
                   className={`${styles.thumbnail} ${

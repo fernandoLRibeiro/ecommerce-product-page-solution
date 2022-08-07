@@ -68,6 +68,7 @@ function Gallery() {
           <li
             className={styles.thumbnailContainer}
             onClick={() => setMainDisplay(index)}
+            key={`gallery thumbnail ${index}`}
           >
             <img
               className={`${styles.thumbnail} ${
