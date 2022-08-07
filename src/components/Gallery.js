@@ -28,7 +28,7 @@ function Gallery() {
     },
   ];
   const [mainDisplay, setMainDisplay] = useState(0);
-  const [open, setOpen] = useState(true);
+  const [open, setOpen] = useState(false);
   return (
     <div className={styles.Gallery}>
       <button
