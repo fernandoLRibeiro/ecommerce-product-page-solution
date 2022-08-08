@@ -6,7 +6,7 @@ import PrimaryButton from "./PrimaryButton";
 import QuantityInput from "./QuantityInput";
 
 function ProductDetails() {
-  const [dispatch] = useContext(StateContext);
+  const [state, dispatch] = useContext(StateContext);
   const [counter, setCounter] = useState(0);
 
   const handleAdd = (item) => {
