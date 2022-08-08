@@ -54,30 +54,32 @@ function Cart() {
             {state.cart.length > 0 ? (
               <>
                 {state.cart.map((item, index) => (
-                  <div className={styles.product} key={`cart item ${index}`}>
-                    <img
-                      className={styles.productThumbnail}
-                      src={item.thumbnail}
-                      alt="product thumbnail"
-                    />
-                    <div className={styles.productInfo}>
-                      <p className={styles.productName}>{item.name}</p>
-                      <div className={styles.priceCluster}>
-                        <p className={styles.relativePrice}>
-                          {formatter.format(
-                            item.discount
-                              ? item.price * item.discount
-                              : item.price
-                          )}{" "}
-                          x {item.quantity}
-                        </p>
-                        <p className={styles.totalPrice}>
-                          {formatter.format(
-                            (item.discount
-                              ? item.price * item.discount
-                              : item.price) * item.quantity
-                          )}
-                        </p>
+                  <div className={styles.cartItem} key={`cart item ${index}`}>
+                    <div className={styles.product}>
+                      <img
+                        className={styles.productThumbnail}
+                        src={item.thumbnail}
+                        alt="product thumbnail"
+                      />
+                      <div className={styles.productInfo}>
+                        <p className={styles.productName}>{item.name}</p>
+                        <div className={styles.priceCluster}>
+                          <p className={styles.relativePrice}>
+                            {formatter.format(
+                              item.discount
+                                ? item.price * item.discount
+                                : item.price
+                            )}{" "}
+                            x {item.quantity}
+                          </p>
+                          <p className={styles.totalPrice}>
+                            {formatter.format(
+                              (item.discount
+                                ? item.price * item.discount
+                                : item.price) * item.quantity
+                            )}
+                          </p>
+                        </div>
                       </div>
                     </div>
                     <button
