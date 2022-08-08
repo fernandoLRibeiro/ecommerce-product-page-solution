@@ -35,7 +35,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
+- Solution URL: [https://www.frontendmentor.io/solutions/ecommerce-product-page-built-with-react-and-css-modules-ItvvejBMgu](https://www.frontendmentor.io/solutions/ecommerce-product-page-built-with-react-and-css-modules-ItvvejBMgu)
 - Live Site URL: [https://flourishing-bonbon-10fe55.netlify.app/e](https://flourishing-bonbon-10fe55.netlify.app/)
 
 ## My process
